@@ -1,7 +1,8 @@
 from collections import OrderedDict
 from Obj import Obj
 import random
-from src.utils import per
+import re
+from src.utils import *
 
 THE_NUMS=99
 
@@ -16,7 +17,12 @@ class Num(Obj):
         self.lo = float('inf') #−− lowest seen
         self.hi= float('-inf')  #highest seen
         self.isSorted= True, # no updates since last sort of data
-        self.w = (column_name or "":find"−$" and −1 or 1)   #ToDo: update the logic
+        #Change
+        if re.search(column_name or "","−$"):
+            self.w = -1
+        else:
+            self.w = 1
+        return 
 
     def nums(self):
         """
@@ -33,11 +39,13 @@ class Num(Obj):
             self.hi = max(self.hi,v)
             if len(self._has) < THE_NUMS:   #ToDo : change the the.nums
                 pos = 1 + len(self._has)
-            elif random.random() < THE_NUMS/self.n:  #ToDo : change the the.nums
-                pos = random(len(self._has))
-            if pos:
-                self.isSorted = False
-                self._has[pos] = int(v)
+            ##Change
+            else:
+                if random.random() < THE_NUMS/self.n:  #ToDo : change the the.nums
+                    pos = random(len(self._has))
+                if pos:
+                    self.isSorted = False
+                    self._has[pos] = int(v)
 
     def div(self,a):
         a = self.nums()
