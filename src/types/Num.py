@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from Obj import Obj
 import random
-import regex as re
+import re
 from src.utils import *
 
 THE_NUMS=99
