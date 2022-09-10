@@ -1,5 +1,32 @@
 from src.types.Num import Num
 from src.types.Sym import Sym
+from testUtils import eg,runs,oo
+from src.utils import the
+
+
+def eg_BAD():
+    print(eg.dont.have.this.field)
+
+def eg_LIST():
+    t = {}
+    for k,_ in enumerate(eg):
+        t[1+len(t)] = k
+        t = sorted(t.items(), key=lambda x: x[1])
+
+def eg_LS():
+    print("\nExamples lua csv −e ...")
+    for _,k in enumerate(eg_LIST()):
+        print(str.format("\t%s",k))
+    return True
+
+def eg_ALL():
+    for _,k in enumerate(eg_LIST()):
+        if k != "ALL":
+            print("\n−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+            if not runs(k):
+                fails = fails+1
+    return True
+
 
 def eg_the():
     oo(the)
@@ -29,5 +56,4 @@ def eg_bignum():
     for i in range(0,999):
         num_obj.add(i+1)
     oo(num_obj.nums())
-    
     return 32 == len(num_obj._has)
