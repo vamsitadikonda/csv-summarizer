@@ -1,7 +1,5 @@
 import math
-
 from Obj import Obj
-
 
 class Sym(Obj):
 
