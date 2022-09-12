@@ -14,7 +14,7 @@ class Num(Obj):
         self.at = column_position or 0 # column position
         self.name = column_name or ""  # column name
         self._has = OrderedDict()  # kept data
-        self.lo = float('inf') #−− lowest seen
+        self.lo = float('inf')  #lowest seen
         self.hi= float('-inf')  #highest seen
         self.isSorted= True, # no updates since last sort of data
         #Change
