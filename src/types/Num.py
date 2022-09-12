@@ -7,13 +7,13 @@ THE_NUMS=99
 
 
 class Num(Obj):
-    def __init__(self,column_position,column_name):
+    def __init__(self,column_position=0,column_name=""):
         super().__init__("Num")
         self.n = 0  # items seen
-        self.at = column_position or 0 # column position
-        self.name = column_name or ""  # column name
+        self.at = column_position # column position
+        self.name = column_name  # column name
         self._has = OrderedDict()  # kept data
-        self.lo = float('inf') #−− lowest seen
+        self.lo = float('inf') #lowest seen
         self.hi= float('-inf')  #highest seen
         self.isSorted= True, # no updates since last sort of data
         self.w = (column_name or "":find"−$" and −1 or 1)   #ToDo: update the logic
