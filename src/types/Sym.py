@@ -1,7 +1,5 @@
 import math
-
 from Obj import Obj
-
 
 class Sym(Obj):
 
@@ -13,7 +11,7 @@ class Sym(Obj):
         self._has = {}  # kept data
 
     def __add__(self, v):
-        if v != "~":
+        if v != "?": ##change
             self.n += 1
             self._has[v] = 1 + self._has[v] if v in self._has else 0
 
