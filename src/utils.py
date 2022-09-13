@@ -1,20 +1,8 @@
 import math
 import sys
 import os
+import re
 
-help = """
-CSV :   summarized csv file
-(c) 2022 Tim Menzies<timm@ieee.org> BSD-2 license
-USAGE: lua seen.lua (OPTIONS]
-OPTIONS:
-    -e  --eg        start-up example                        = None
-    -d  --dump      on test failure, exit with stack dump   = false
-    -f  --file      file with csv data                      = ../data/auto93.csv
-    -h  --help      show help                               = false
-    -n  --nums      number of nums to keep                  = 512
-    -s  --seed      random seed                             = 10019
-    -S  --Seperator feild separator                         = ,
-"""
 fails = 0
 
 
@@ -54,8 +42,36 @@ def rogues():           #ToDo
     return NotImplementedError
 
 
-def init_the():         #ToDo
-    return NotImplementedError
+def init_the():
+    global the
+    def func(v):
+        the[v.group(1)] = coerce(v.group(2))
+
+    re.sub(
+        "\n [-][\S]+[\s]+[-][-]([\S]+)[^\n]+=([\S]+)",
+        lambda match: func(match),
+        HELP_STRING,
+    )
+
+    if len(sys.argv) > 1:
+        csv_args = {}
+        for i in range(1, len(sys.argv), 2):
+            if i + 1 < len(sys.argv):
+                csv_args[sys.argv[i]] = sys.argv[i + 1]
+            else:
+                csv_args[sys.argv[i]] = True
+            for slot, v in the.items():
+                v = str(v)
+                for k, x in csv_args.items():
+                    if (k == "-" + slot[0:1]) or (k == "--" + slot):
+                        v = (
+                            "True"
+                            if v == "False"
+                            else "False"
+                            if v == "True"
+                            else x
+                        )
+                the[slot] = coerce(v)
 
 
 def csv(fname,fun):     #ToDo
