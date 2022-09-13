@@ -1,6 +1,7 @@
 import math
 from Obj import Obj
 
+
 class Sym(Obj):
 
     def __init__(self, column_position, column_name):
@@ -10,19 +11,19 @@ class Sym(Obj):
         self.name = column_name or ""  # column name
         self._has = {}  # kept data
 
-    def __add__(self, v):
-        if v != "?": ##change
+    def add(self, v):
+        if v != "?":
             self.n += 1
             self._has[v] = 1 + self._has[v] if v in self._has else 0
 
-    def mid(self, col, most, mode):
+    def mid(self):
         most = -1
         for k in self._has:
             if self._has[k] > most:
                 mode, most = k, self._has[k]
         return mode
 
-    def div(self, e, fun=None):
+    def div(self):
         def fun(p):
             return p * math.log2(p)
 
