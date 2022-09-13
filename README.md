@@ -10,7 +10,7 @@
 [![codecov](https://codecov.io/gh/vamsitadikonda/csv-summarizer/branch/main/graph/badge.svg?token=h4F94IJMzj)](https://codecov.io/gh/vamsitadikonda/csv-summarizer)
 
 # csv-summarizer (HW-2,HW-3,HW-4)
-Python version for an existing Lua Code to summarize a csv file
+Python version of an existing Lua Code to summarize a csv file
 
 ## Technologies ##
 Python 3.8.0
