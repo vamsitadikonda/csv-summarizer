@@ -4,8 +4,6 @@ import random
 import re
 from src.utils import *
 
-THE_NUMS=99
-
 
 class Num(Obj):
     def __init__(self,column_position,column_name):
