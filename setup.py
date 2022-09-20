@@ -9,7 +9,7 @@ setup(
     author='Katabathuni, Bharath',
     author_email='bharathkatabathuni@gmail.com',
     url='https://github.com/vamsitadikonda/csv-summarizer',
-    python_requires='>=3.7',
+    python_requires='>=3.8',
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
