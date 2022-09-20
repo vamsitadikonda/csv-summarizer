@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from Obj import Obj
+from src.types.Obj import Obj
 import random
 import re
 from src.utils import *

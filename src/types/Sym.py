@@ -1,5 +1,5 @@
 import math
-from Obj import Obj
+from src.types.Obj import Obj
 
 
 class Sym(Obj):

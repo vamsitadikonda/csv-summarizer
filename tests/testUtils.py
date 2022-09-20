@@ -1,4 +1,3 @@
-from tests import eg
 from src.utils import the
 import random
 import sys

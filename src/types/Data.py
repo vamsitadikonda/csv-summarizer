@@ -1,7 +1,7 @@
 from collections import OrderedDict
-from Obj import Obj
-from Cols import Cols
-from Row import Row
+from src.types.Obj import Obj
+from src.types.Cols import Cols
+from src.types.Row import Row
 from src.utils import csv, push, rnd
 
 
