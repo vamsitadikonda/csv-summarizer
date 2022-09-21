@@ -1,7 +1,6 @@
-from Obj import Obj
-from Sym import Sym
-from Num import Num
-from src.utils import push
+from src.types.Obj import Obj
+from src.types.Sym import Sym
+from src.types.Num import Num
 import re
 
 
@@ -9,19 +8,23 @@ class Cols(Obj):
     def __init__(self, names):
         super().__init__("Cols")
         self.names = names
-        self.all = {}
+        self.all = []
         self.klass = None
-        self.x = {}
-        self.y = {}
+        self.x = []
+        self.y = []
         for c, s in enumerate(names):
-            if re.search(s, "^[A−Z]*"):
-                col = push(self.all, Num(c, s))
+            # Checking for the type of the column
+            if re.search(r"^[A-Z]",s):
+                col = Num(c, s)
+                self.all.append(Num(c, s))
             else:
-                col = push(self.all, Sym(c,s))
-            if not re.search(s, ":$"):
-                if re.search(s, "[!+−]"):
-                    push(self.y, col)
+                col = Sym(c, s)
+                self.all.append(Sym(c, s))
+            # ignoring for hidden cols
+            if not re.search(r":$",s):
+                if re.search(r"[!+−-]$",s):
+                    self.y.append(col)
                 else:
-                    push(self.x, col)
-                if re.search(s, "!$"):
+                    self.x.append(col)
+                if re.search(r"!$",s):
                     self.klass = col
