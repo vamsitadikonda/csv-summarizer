@@ -15,7 +15,6 @@ def runs(eg, k):
         else:
             out = getattr(eg, k)()
             status = out is not None
-            print(k,status,out)
     except Exception as e:
         status = False
         err = traceback.format_exc(e)

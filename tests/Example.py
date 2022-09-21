@@ -32,7 +32,7 @@ class Example:
         return True
 
     def the(self):
-        oo(src.constants.the)
+        oo(src.constants.the)   #ToDo: Fix eg print statement to ALL
         return True
 
     def sym(self):
@@ -63,8 +63,7 @@ class Example:
 
     def stats(self):
         data_obj = Data("data/auto93.csv")
-        print(str(1) + str(data_obj.cols))
-        print("2" + str(data_obj.rows))
+
         def div(col):
             return col.div()
 
@@ -81,6 +80,7 @@ class Example:
         n = 0
 
         def func(row):
+            nonlocal n
             n += 1
             if n > 10:
                 return
@@ -92,6 +92,6 @@ class Example:
 
     def data(self):
         d = Data("data/auto93.csv")
-        for k in d.cols.y:
-            oo(d.cols.y[k])
+        for col in d.cols.y:
+            oo(col)     #ToDo: Fix printing logic
         return True

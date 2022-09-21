@@ -4,6 +4,19 @@ import re
 from src.constants import help_string, the
 
 
+def checknum(s):
+    """
+    Function to check if s can be converted to float
+    :param s:
+    :return: Boolean
+    """
+    try:
+        float(s)
+        return True
+    except:
+        return False
+
+
 def coerce(s):
     def fun(s1):
         if s1 == "True":
@@ -12,7 +25,7 @@ def coerce(s):
             return False
         return s1
 
-    return int(s) if s.isnumeric() else None or fun(s.split()[0])
+    return float(s) if checknum(s) else None or fun(s.split()[0])
 
 
 def cli():
@@ -47,7 +60,7 @@ def csv(fname, fun):
     with open(fname) as fp:
         for s in fp.readlines():
             t = []
-            for s1 in s.split(sep):
+            for s1 in s.strip("\n").split(sep):
                 t.append(coerce(s1))
             fun(t)
     return
@@ -90,7 +103,7 @@ def copy(t):
     if not (isinstance(t, list) or isinstance(t, dict)):
         return t
     elif isinstance(t, list):
-        return list.copy()
+        return t.copy()
     else:
         u = {}
         for k in t:
