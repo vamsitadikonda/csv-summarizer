@@ -1,26 +1,37 @@
-import src.constants
+from src.utils import the
 import random
-import traceback
+import sys
 
+def oo(t):
+    if type(t) == list:
+        t = list(map(lambda x: str(x), t))
+        out_string = "{" + " ".join(t) + "}"
+        print(out_string)
+        return out_string
+    else:
+        out_string = o(t)
+        print(out_string)
+        return out_string
 
-def runs(eg, k):
-    if not (hasattr(eg, k) and callable(getattr(eg, k))):
+def runs(k):
+    err = None
+    if not eg[k]:
         return
-    err, status, out = None, None, None
-    random.seed(src.constants.the["seed"])
-    old = {k: src.constants.the[k] for k in src.constants.the}
+    random.seed(the.seed)
+    old = {}
+    for k,v in enumerate(the):
+        old[k]=v
     try:
-        if src.constants.the['dump']:
-            status, out = True, getattr(eg, k)()
+        ##TODO eg[k]()
+        if the.dump:
+            status, out = True, eg[k]()
         else:
-            out = getattr(eg, k)()
-            status = out is not None
-            print(k,status,out)
+            status, out = True if eg[k] else False, None
     except Exception as e:
-        status = False
-        err = traceback.format_exc(e)
+        err = sys.exc_info()
     finally:
-        the = {k: old[k] for k in old}
+        for k, v in enumerate(old):
+            the[k] = v
         msg = status and ((out == True and "PASS") or "FAIL") or "CRASH"
         print("!!!!", msg, k, status)
         return out or err

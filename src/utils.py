@@ -33,6 +33,10 @@ def push(t, x):
     return x
 
 
+def runs():  # ToDo
+    return NotImplementedError
+
+
 def rogues():  # ToDo
     return NotImplementedError
 
@@ -58,28 +62,5 @@ def rnd(x, places):
 
 
 def per(t, p):
-    p = math.floor(((p or .5) * len(t)-1) + .5)
-    return t[max(0, min(len(t)-1, p))]
-
-
-def o(t):
-    if not (isinstance(t, dict) or isinstance(t, list)):
-        return str(t)
-
-    def show(k, v):
-        if str(k).find("_") != 0:
-            v = o(v)
-            return (isinstance(t, dict) and ":{} {}".format(k, v)) or str(v)
-
-    if isinstance(t, dict):
-        u = [show(k, v) for k, v in t.items()]
-        if isinstance(t, dict):
-            u = sorted(u)
-        return "{" + " ".join(u) + "}"
-    elif isinstance(t, list):
-        u = [show(k, v) for k, v in enumerate(t)]
-        return "{" + " ".join(u) + "}"
-
-
-def oo(t):
-    return print(o(t))
+    p = math.floor(((p or .5) * len(t)) + .5)
+    return t[max(1, min(len(t), p))]

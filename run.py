@@ -11,14 +11,7 @@ def main():
         print(help_string)
     else:
         the['eg'] = Example()
-        print(the["eg"].ALL())
-        #print(the["eg"].LIST())
-        #print(the["eg"].LS())
-        #print(the["eg"].bignum())
-        #print(the["eg"].num())
-        print(the["eg"].sym())
-        #print(the["eg"].the())
-
+        print(the["eg"].LIST())
 
 if __name__ == "__main__":
     main()
