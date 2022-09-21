@@ -15,12 +15,11 @@ def runs(eg, k):
         else:
             out = getattr(eg, k)()
             status = out is not None
-            print(k,status,out)
     except Exception as e:
         status = False
         err = traceback.format_exc(e)
     finally:
-        the = {k: old[k] for k in old}
+        src.constants.the = {k: old[k] for k in old}
         msg = status and ((out == True and "PASS") or "FAIL") or "CRASH"
         print("!!!!", msg, k, status)
         return out or err

@@ -1,7 +1,7 @@
 from src.types.Obj import Obj
 from src.types.Cols import Cols
 from src.types.Row import Row
-from src.utils import csv, rnd
+from src.utils import csv, rnd, checknum
 
 
 class Data(Obj):
@@ -20,18 +20,17 @@ class Data(Obj):
         if not self.cols:
             self.cols = Cols(xs)
         else:
-            row = xs if hasattr(xs, 'cell') and xs.cells else Row(xs)
+            row = xs if hasattr(xs, 'cells') and xs.cells else Row(xs)
             self.rows.append(row)
-            for _, col in enumerate(self.cols.x + self.cols.y):
-                col.add(row.cells[col.at])
+            for todo in self.cols.x + self.cols.y:
+                todo.add(row.cells[todo.at])
 
-    def stats(self, places, showCols=None, fun="mid"):
+    def stats(self, places, showCols=None, fun="mid"):  #ToDo: change string mid to function mid
         if showCols is None:
-            showCols = self.cols
-        print(showCols)
+            showCols = self.cols.y
         t = {}
         for col in showCols:
             v = fun(col)
-            v = v.isnumeric() and rnd(v, places) or v
+            v = checknum(v) and rnd(v, places) or v
             t[col.name] = v
         return t
