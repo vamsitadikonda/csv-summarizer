@@ -1,3 +1,4 @@
+import sys
 from src.utils import init_the, cli
 from src.constants import help_string, the
 from tests.Example import Example
@@ -12,6 +13,9 @@ def main():
     else:
         eg = Example()
         runs(eg, the['eg'])
+    return eg.fails
+
 
 if __name__ == "__main__":
-    main()
+    fails_cnt = main()
+    sys.exit(fails)
