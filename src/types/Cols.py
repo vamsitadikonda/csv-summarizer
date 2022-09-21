@@ -1,6 +1,6 @@
-from Obj import Obj
-from Sym import Sym
-from Num import Num
+from src.types.Obj import Obj
+from src.types.Sym import Sym
+from src.types.Num import Num
 from src.utils import push
 import re
 

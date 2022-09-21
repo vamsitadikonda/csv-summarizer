@@ -1,4 +1,4 @@
-from Obj import Obj
+from src.types.Obj import Obj
 
 
 class Row(Obj):
