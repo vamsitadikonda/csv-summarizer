@@ -1,5 +1,7 @@
 the = {}
 
+b4 = {}
+
 help_string = """CSV :   summarized csv file
 (c) 2022 Tim Menzies<timm@ieee.org> BSD-2 license
 USAGE: lua seen.lua (OPTIONS]
