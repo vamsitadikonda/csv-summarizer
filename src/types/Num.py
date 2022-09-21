@@ -1,6 +1,7 @@
 from src.types.Obj import Obj
 import random
-from src.utils import *
+import re
+from src.utils import per
 
 
 class Num(Obj):
@@ -13,12 +14,11 @@ class Num(Obj):
         self.lo = float('inf')  # lowest seen
         self.hi = float('-inf')  # highest seen
         self.isSorted = True,  # no updates since last sort of data
-        # Change
+        # ToDo Change
         if re.search(column_name or "", "−$"):
             self.w = -1
         else:
             self.w = 1
-        return
 
     def nums(self):
         """
@@ -30,6 +30,7 @@ class Num(Obj):
         return self._has
 
     def add(self, v):
+        from src.constants import the
         if v != "?":
             self.n += 1
             self.lo = min(self.lo, v)
