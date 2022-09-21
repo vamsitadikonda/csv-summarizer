@@ -93,5 +93,5 @@ class Example:
     def data(self):
         d = Data("data/auto93.csv")
         for col in d.cols.y:
-            oo(col)     #ToDo: Fix printing logic
+            oo(col)
         return True
