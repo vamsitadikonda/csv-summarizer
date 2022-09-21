@@ -1,8 +1,8 @@
 the = {}
 
 help_string = """CSV :   summarized csv file
-(c) 2022 Tim Menzies<timm@ieee.org> BSD-2 license
-USAGE: lua seen.lua (OPTIONS]
+(c) 2022 Vamsi Tadikonda<vamsitadikonda99@gmail.com> BSD-2 license
+USAGE: python run.py [OPTIONS]
 OPTIONS:
     -e  --eg        start-up example                        = None
     -d  --dump      on test failure, exit with stack dump   = False
