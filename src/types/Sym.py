@@ -4,11 +4,11 @@ from src.types.Obj import Obj
 
 class Sym(Obj):
 
-    def __init__(self, column_position, column_name):
+    def __init__(self, column_position=0, column_name=""):
         super().__init__("Sym")
         self.n = 0  # items seen
-        self.at = column_position or 0  # column position
-        self.name = column_name or ""  # column name
+        self.at = column_position # column position
+        self.name = column_name  # column name
         self._has = {}  # kept data
 
     def add(self, v):
