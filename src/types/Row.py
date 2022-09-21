@@ -1,4 +1,5 @@
 from src.types.Obj import Obj
+from src.utils import copy
 
 
 class Row(Obj):

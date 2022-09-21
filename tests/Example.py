@@ -1,4 +1,4 @@
-from src.utils import oo
+from src.utils import oo, o, csv
 import src.constants
 from src.types.Sym import Sym
 from src.types.Num import Num
@@ -60,3 +60,38 @@ class Example:
             num_obj.add(i + 1)
         oo(num_obj.nums())
         return 32 == len(num_obj._has)
+
+    def stats(self):
+        data_obj = Data("data/auto93.csv")
+        print(str(1) + str(data_obj.cols))
+        print("2" + str(data_obj.rows))
+        def div(col):
+            return col.div()
+
+        def mid(col):
+            return col.mid()
+
+        print("xmid", o(data_obj.stats(2, data_obj.cols.x, mid)))
+        print("xdiv", o(data_obj.stats(3, data_obj.cols.x, div)))
+        print("ymid", o(data_obj.stats(2, data_obj.cols.y, mid)))
+        print("ydiv", o(data_obj.stats(3, data_obj.cols.y, div)))
+        return True
+
+    def csv(self):
+        n = 0
+
+        def func(row):
+            n += 1
+            if n > 10:
+                return
+            else:
+                oo(row)
+
+        csv("data/auto93.csv", func)
+        return True
+
+    def data(self):
+        d = Data("data/auto93.csv")
+        for k in d.cols.y:
+            oo(d.cols.y[k])
+        return True

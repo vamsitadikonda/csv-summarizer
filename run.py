@@ -16,8 +16,9 @@ def main():
         #print(the["eg"].LS())
         #print(the["eg"].bignum())
         #print(the["eg"].num())
-        print(the["eg"].sym())
+        #print(the["eg"].sym())
         #print(the["eg"].the())
+        print(the["eg"].stats())
 
 
 if __name__ == "__main__":

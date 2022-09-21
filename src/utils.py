@@ -28,11 +28,6 @@ def cli():
     return the
 
 
-def push(t, x):
-    t[1 + len(t)] = x
-    return x
-
-
 def rogues():  # ToDo
     return NotImplementedError
 
@@ -47,9 +42,15 @@ def init_the():
         func(match)
 
 
-def csv(fname, fun):  # ToDo
-    sep = []
-    return NotImplementedError
+def csv(fname, fun):
+    sep = ","
+    with open(fname) as fp:
+        for s in fp.readlines():
+            t = []
+            for s1 in s.split(sep):
+                t.append(coerce(s1))
+            fun(t)
+    return
 
 
 def rnd(x, places):
@@ -58,8 +59,8 @@ def rnd(x, places):
 
 
 def per(t, p):
-    p = math.floor(((p or .5) * len(t)-1) + .5)
-    return t[max(0, min(len(t)-1, p))]
+    p = math.floor(((p or .5) * len(t) - 1) + .5)
+    return t[max(0, min(len(t) - 1, p))]
 
 
 def o(t):
@@ -83,3 +84,15 @@ def o(t):
 
 def oo(t):
     return print(o(t))
+
+
+def copy(t):
+    if not (isinstance(t, list) or isinstance(t, dict)):
+        return t
+    elif isinstance(t, list):
+        return list.copy()
+    else:
+        u = {}
+        for k in t:
+            u[k] = t[k]
+        return u
