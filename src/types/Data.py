@@ -25,9 +25,13 @@ class Data(Obj):
             for todo in self.cols.x + self.cols.y:
                 todo.add(row.cells[todo.at])
 
-    def stats(self, places, showCols=None, fun="mid"):  #ToDo: change string mid to function mid
+    def stats(self, places, showCols=None, fun=None):
+        def mid(col):
+            return col.mid()
         if showCols is None:
             showCols = self.cols.y
+        if fun is None:
+            fun=mid
         t = {}
         for col in showCols:
             v = fun(col)
