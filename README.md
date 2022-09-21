@@ -13,7 +13,7 @@
 Python version of an existing Lua Code to summarize a csv file
 
 ## Technologies ##
-Python 3.8.0
+Python 3.8.9
 
 #### Prerequisites ####
 This project requires python setup
@@ -34,14 +34,15 @@ CONTRIBUTING.md
 INSTALL.md
 LICENSE.md
 README.md
-setup.py         
+setup.py  
+run.py
 requirements.txt 
 data/
-  README.md
+  ...
 test/
-  README.md
-code/
-  __init__.py 
+  ...
+src/
+  ... 
 ```
 
 ## Group Members ##
