@@ -1,9 +1,9 @@
-from Obj import Obj
+from src.types.Obj import Obj
+
 
 class Row(Obj):
-    def __init__(self,t):
+    def __init__(self, t):
         super().__init__("Row")
-        return {"cells":t,
-                "cooked":t.copy(),
-                "isEvaled":False
-                }
+        self.cells = t
+        self.cooked = t.copy()
+        self.isEvaled = False
