@@ -18,4 +18,4 @@ def main():
 
 if __name__ == "__main__":
     fails_cnt = main()
-    sys.exit(fails)
+    sys.exit(fails_cnt)
