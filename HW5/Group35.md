@@ -1,23 +1,36 @@
-|Notes|Score|Evidence|
-|-----|----|--------|
-|Workload is spread over the whole team (one team member is often Xtimes more productive than the others... 
-but nevertheless, here is a track record that everyone is contributing a lot)|3|evidence in GH|
-|Number of commits|3|in GH|
-|Number of commits: by different people|3|in GH|
-|Issues reports: there are **many**|
-|Issues are being closed|3|evidence in GH|
-|DOI badge: exists|3|in GH|
-|Docs: doco generated, format not ugly ||in GH|
-|Docs: what: point descriptions of each class/function (in isolation) |
-|Use of version control tools|
-|Use of style checkers ||config files in GH showing your config|
-|Use of code formatters. ||config files in GH showing your this formatter's  config|
-|Use of syntax checkers. ||config files iin  GH showing this checker's config  |
-|Use of code coverage |3|config files in GH|
-|Other automated analysis tools|3|config files in GH|
-|Test cases exist|3|dozens of tests and those test cases are more than 30% of the code base|
-|Test cases are routinely executed|3|E.g. travis-com.com or github actions or something|
-|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3||
-|Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|
-|Evidence that the members of the team are working across multiple places in the code base|3||
-|Short release cycles || (hard to see in short projects) project members are committing often enough so that everyone can get your work|
+Repo link: https://github.com/CSC510-G35-Fall2022/csc510-g35-hw2
+
+## Scoring Criterion
+
+|Notes|Score (Total = 34)|Evidence|
+|-----|----------|--------|
+|Video1|0|NA for HW|
+|Video2|0|NA for HW|
+|Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|2|[GitHub Insights](https://github.com/SASWAT123/SoftwareEngineering/graphs/contributors)|
+|Number of commits|3|Total 124 commit history|
+|Number of commits: by different people|2|[GitHub Insights](https://github.com/SASWAT123/SoftwareEngineering/graphs/contributors)|
+|Issues reports: there are **many**|0|No Issues|
+|Issues are being closed|0|No Issues|
+|DOI badge: exists|3|Exists in [README.md](https://github.com/SASWAT123/SoftwareEngineering/blob/master/README.md)|
+|Docs: doco generated, format not ugly |0|Can't find docs|
+|Docs: what: point descriptions of each class/function (in isolation) |0|Can't find docs|
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|0|Can't find docs|
+|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|0|Can't find docs|
+|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|0|Can't find docs|
+|Use of version control tools|3|Using GitHub for version control|
+|Use of style checkers |3|Code Linting Integrated [GitHub Action](https://github.com/SASWAT123/SoftwareEngineering/actions/workflows/linter.yml)|
+|Use of code formatters. |3|Code Linting Integrated [GitHub Action](https://github.com/SASWAT123/SoftwareEngineering/actions/workflows/linter.yml)|
+|Use of syntax checkers. |3|Code Linting Integrated [GitHub Action](https://github.com/SASWAT123/SoftwareEngineering/actions/workflows/linter.yml)|
+|Use of code coverage |2|SonarQube Analysis via GitHub actions but code-coverage not presented in README|
+|Other automated analysis tools|0|NA|
+|Test cases exist|3|Tests exists in src folder|
+|Test cases are routinely executed|0|No scheduled GitHub action|
+|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|Yes contributing.md is descriptive|
+|Issues are discussed before they are closed|0|Issues not found|
+|Chat channel: exists|0|NA|
+|Test cases: a large proportion of the issues related to handling failing cases.|1|Mainly testing for positive scenarios|
+|Evidence that the whole team is using the same tools: everyone can get to all tools and files|0|No way to identify|
+|Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|0|No shared config file found|
+|Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|0|No way to identify|
+|Evidence that the members of the team are working across multiple places in the code base|2|Well spread across contributions are noticed by commit history|
+|Short release cycles |1|Just one release found 20 days ago|
