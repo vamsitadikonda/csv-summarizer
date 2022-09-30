@@ -1,20 +1,20 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='SE Homework1',
-    version='1.0.0',
+    name='csv-summarizer',
+    version='1.0.1',
     packages=find_packages(),
-    description='SE repository',
+    description='Package for summarizing csv files',
     tests_require=['test'],
-    author='Katabathuni, Bharath',
-    author_email='bharathkatabathuni@gmail.com',
+    author='Tadikonda, Vamsi',
+    author_email='vamsitadikonda99@gmail.com',
     url='https://github.com/vamsitadikonda/csv-summarizer',
     python_requires='>=3.8',
     classifiers=[
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: BSD 2-Clause",
         "Programming Language :: Python",
         "Intended Audience :: Developers",
-        "Topic :: Homework1",
+        "Topic :: Homework2345",
     ],
-    license='MIT'
+    license='BSD 2-Clause'
 )

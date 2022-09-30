@@ -19,7 +19,7 @@ def runs(eg, k):
         status = False
         err = traceback.format_exc(e)
     finally:
-        src.constants.the = {k: old[k] for k in old}
+        src.constants.the = {x: old[x] for x in old}
         msg = status and ((out == True and "PASS") or "FAIL") or "CRASH"
         print("!!!!", msg, k, status)
         return out or err

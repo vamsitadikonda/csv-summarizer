@@ -1,6 +1,6 @@
 # NCSU CSC-510 Software Engineering HW GROUP-0 #
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
-![License](https://github.com/vamsitadikonda/csv-summarizer/actions/workflows/python-app.yml/badge.svg)
+[![Build](https://github.com/vamsitadikonda/csv-summarizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/csv-summarizer/actions)
 [![DOI](https://zenodo.org/badge/530866405.svg)](https://zenodo.org/badge/latestdoi/530866405)
 [![GitHub Release](https://img.shields.io/github/release/vamsitadikonda/csv-summarizer)](https://github.com/vamsitadikonda/csv-summarizer/releases/)
 ![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
