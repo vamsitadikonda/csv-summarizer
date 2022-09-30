@@ -1,6 +1,6 @@
-from src.types.Obj import Obj
-from src.types.Sym import Sym
-from src.types.Num import Num
+from src.csv_types.Obj import Obj
+from src.csv_types.Sym import Sym
+from src.csv_types.Num import Num
 import re
 
 

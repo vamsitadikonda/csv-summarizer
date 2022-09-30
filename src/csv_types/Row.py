@@ -1,4 +1,4 @@
-from src.types.Obj import Obj
+from src.csv_types.Obj import Obj
 from src.utils import copy
 
 

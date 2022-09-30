@@ -1,5 +1,5 @@
 import math
-from src.types.Obj import Obj
+from src.csv_types.Obj import Obj
 
 
 class Sym(Obj):
