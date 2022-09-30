@@ -43,3 +43,7 @@ jobs:
         coverage run run.py -e ALL
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
+    - name: Generating Documentation
+      run: |
+        pip install pdoc
+        python -m pdoc ./src/* -o ./docs/src
