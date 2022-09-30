@@ -1,3 +1,8 @@
+#! /bin/bash
+echo 'Git commit successful. Running test suite'
+homedir=$(git rev-parse --show-toplevel)
+cd $homedir
+
 echo 'Generating Documentation'
 pip install pdoc
 python -m pdoc ./src/* -o ./docs/src
