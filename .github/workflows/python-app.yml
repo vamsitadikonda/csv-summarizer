@@ -54,4 +54,4 @@ jobs:
         # Include all JS files from the `dist` directory
         file-path: docs/src/*
         commit-msg: Update resources
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
