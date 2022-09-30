@@ -4,7 +4,7 @@ Repo link: https://github.com/CSC510-G35-Fall2022/csc510-g35-hw2
 
 ## Scoring Criterion
 
-|Notes|Score (Total = 34)|Evidence|
+|Notes|Score (Total = 33)|Evidence|
 |-----|----------|--------|
 |Video1|0|NA for HW|
 |Video2|0|NA for HW|
