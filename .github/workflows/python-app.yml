@@ -37,3 +37,9 @@ jobs:
     - name: Test with Custom Test Engine
       run: |
         python run.py -e ALL
+    - name: Generate Coverage Report
+      run: |
+        pip install coverage
+        coverage run run.py -e ALL
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2

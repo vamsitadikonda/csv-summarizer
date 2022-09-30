@@ -1,6 +1,6 @@
 # NCSU CSC-510 Software Engineering HW GROUP-0 #
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-![License](https://github.com/vamsitadikonda/csv-summarizer/actions/workflows/python-app.yml/badge.svg)
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+[![Build](https://github.com/vamsitadikonda/csv-summarizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/csv-summarizer/actions)
 [![DOI](https://zenodo.org/badge/530866405.svg)](https://zenodo.org/badge/latestdoi/530866405)
 [![GitHub Release](https://img.shields.io/github/release/vamsitadikonda/csv-summarizer)](https://github.com/vamsitadikonda/csv-summarizer/releases/)
 ![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
@@ -13,7 +13,7 @@
 Python version of an existing Lua Code to summarize a csv file
 
 ## Technologies ##
-Python 3.8.0
+Python 3.8.9
 
 #### Prerequisites ####
 This project requires python setup
@@ -34,14 +34,15 @@ CONTRIBUTING.md
 INSTALL.md
 LICENSE.md
 README.md
-setup.py         
+setup.py  
+run.py
 requirements.txt 
 data/
-  README.md
+  ...
 test/
-  README.md
-code/
-  __init__.py 
+  ...
+src/
+  ... 
 ```
 
 ## Group Members ##
