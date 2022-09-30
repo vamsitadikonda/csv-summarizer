@@ -1,8 +1,8 @@
 from src.utils import oo, o, csv
 import src.constants
-from src.types.Sym import Sym
-from src.types.Num import Num
-from src.types.Data import Data
+from src.csv_types.Sym import Sym
+from src.csv_types.Num import Num
+from src.csv_types.Data import Data
 from tests.testUtils import runs
 
 

@@ -1,6 +1,6 @@
-from src.types.Obj import Obj
-from src.types.Cols import Cols
-from src.types.Row import Row
+from src.csv_types.Obj import Obj
+from src.csv_types.Cols import Cols
+from src.csv_types.Row import Row
 from src.utils import csv, rnd, checknum
 
 
