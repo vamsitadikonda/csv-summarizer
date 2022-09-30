@@ -1,0 +1,3 @@
+echo 'Generating Documentation'
+pip install pdoc
+python -m pdoc ./src/* -o ./docs/src

@@ -43,15 +43,3 @@ jobs:
         coverage run run.py -e ALL
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
-    - name: Generating Documentation
-      run: |
-        pip install pdoc
-        python -m pdoc ./src/* -o ./docs/src
-
-    - name: Adding Documentation
-      uses: test-room-7/action-update-file@v1
-      with:
-        # Include all JS files from the `dist` directory
-        file-path: docs/src/*
-        commit-msg: Update resources
-        github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
