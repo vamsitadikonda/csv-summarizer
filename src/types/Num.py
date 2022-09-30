@@ -14,8 +14,7 @@ class Num(Obj):
         self.lo = float('inf')  # lowest seen
         self.hi = float('-inf')  # highest seen
         self.isSorted = True,  # no updates since last sort of data
-        # ToDo Change
-        if re.search(column_name or "", "−$"):
+        if re.search(re.compile(r"-$"), column_name or ""):
             self.w = -1
         else:
             self.w = 1
