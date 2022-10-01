@@ -15,7 +15,10 @@ Python version of an existing Lua Code to summarize a csv file
 ## Technologies ##
 Python 3.8.9
 
-#### Prerequisites ####
+### Documentation ###
+The documenation for the codebase is automatically generated and hosted at [https://www.vamsitadikonda.com/csv-summarizer](https://www.vamsitadikonda.com/csv-summarizer/)
+
+### Prerequisites ###
 This project requires python setup
 
 Summary:
