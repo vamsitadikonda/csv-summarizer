@@ -1,4 +1,5 @@
-# NCSU CSC-510 Software Engineering HW GROUP-0 #
+
+# CSV Summarizer 
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![Build](https://github.com/vamsitadikonda/csv-summarizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/csv-summarizer/actions)
 [![DOI](https://zenodo.org/badge/530866405.svg)](https://zenodo.org/badge/latestdoi/530866405)
@@ -9,7 +10,6 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/vamsitadikonda/csv-summarizer)
 [![codecov](https://codecov.io/gh/vamsitadikonda/csv-summarizer/branch/main/graph/badge.svg?token=h4F94IJMzj)](https://codecov.io/gh/vamsitadikonda/csv-summarizer)
 
-# csv-summarizer (HW-2,HW-3,HW-4)
 Python version of an existing Lua Code to summarize a csv file
 
 ## Technologies ##
